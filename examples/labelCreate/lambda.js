@@ -20,10 +20,8 @@ exports.handler = function (event, context, callback) {
    * simplify the example, we will simply create a fake
    * static gift card. 
    */
-  const sampleGiftcardObject = {
-    value: '9.88',
-    currency: 'USD',
-    code: 'AAAA BBBB CCCC DDDD',
+  const sampleLabelObject = {
+    // TODO
   };
 
   /**
@@ -34,6 +32,6 @@ exports.handler = function (event, context, callback) {
    * for more details).
    */
   callback(null, {
-    giftcard: sampleGiftcardObject,
+    label: sampleLabelObject,
   });
 };

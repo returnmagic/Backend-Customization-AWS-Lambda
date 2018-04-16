@@ -1,6 +1,5 @@
-# `giftcardCreate` Integration
-The `giftcardCreate` integration request may be executed once a return is refunded. It will
-typically create a new gift card (or creates store credits, for example), and return it to Return Magic.
+# `labelCreate` Integration
+The `labelCreate` integration request may be executed once a return is approved.
 
 Return Magic will be responsible of sending a confirmation email to the customer.
 
@@ -9,9 +8,9 @@ Return Magic will be responsible of sending a confirmation email to the customer
 ```js
 {
   version: '1.0',
-  request: 'giftcardCreate',
+  request: 'labelCreate',
   payload: {
-    giftcardCreateRequest: {
+    labelCreateRequest: {
       // TODO
     }
   }
@@ -21,7 +20,7 @@ Return Magic will be responsible of sending a confirmation email to the customer
 ## Structure of the response
 ```js
 {
-  giftcard: {
+  label: {
     // TODO
   }
 }
