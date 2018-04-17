@@ -4,7 +4,7 @@
 ```js
 {
   version: '1.0',
-  request: 'syncCustomers',
+  type: 'syncCustomers',
   payload: {
     syncCustomersRequest: {
       // TODO

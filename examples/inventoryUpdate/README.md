@@ -6,7 +6,7 @@ The `inventoryUpdate` integration request may be executed once a return is refun
 ```js
 {
   version: '1.0',
-  request: 'inventoryUpdate',
+  type: 'inventoryUpdate',
   payload: {
     inventoryUpdateRequest: {
       // TODO

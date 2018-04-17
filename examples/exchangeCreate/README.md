@@ -8,7 +8,7 @@ Return Magic will be responsible of sending a confirmation email to the customer
 ```js
 {
   version: '1.0',
-  request: 'exchangeCreate',
+  type: 'exchangeCreate',
   payload: {
     exchangeCreateRequest: {
       // TODO

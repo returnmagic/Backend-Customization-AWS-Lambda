@@ -4,7 +4,7 @@
 ```js
 {
   version: '1.0',
-  request: 'syncOrders',
+  type: 'syncOrders',
   payload: {
     syncOrdersRequest: {
       // TODO

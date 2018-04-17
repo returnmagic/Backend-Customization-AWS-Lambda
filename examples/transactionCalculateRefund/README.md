@@ -4,7 +4,7 @@
 ```js
 {
   version: '1.0',
-  request: 'transactionCalculateRefund',
+  type: 'transactionCalculateRefund',
   payload: {
     transactionCalculateRefundRequest: {
       // TODO

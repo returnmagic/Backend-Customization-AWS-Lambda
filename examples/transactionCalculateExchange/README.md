@@ -4,7 +4,7 @@
 ```js
 {
   version: '1.0',
-  request: 'transactionCalculateExchange',
+  type: 'transactionCalculateExchange',
   payload: {
     transactionCalculateExchangeRequest: {
       // TODO

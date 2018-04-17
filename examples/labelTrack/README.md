@@ -5,7 +5,7 @@ The `labelTrack` integration request may be executed many times.
 ```js
 {
   version: '1.0',
-  request: 'labelTrack',
+  type: 'labelTrack',
   payload: {
     labelTrackRequest: {
       // TODO

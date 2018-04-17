@@ -4,7 +4,7 @@
 ```js
 {
   version: '1.0',
-  request: 'syncProducts',
+  type: 'syncProducts',
   payload: {
     syncProductsRequest: {
       // TODO

@@ -4,7 +4,7 @@
 ```js
 {
   version: '1.0',
-  request: 'transactionCalculateGiftcard',
+  type: 'transactionCalculateGiftcard',
   payload: {
     transactionCalculateGiftcardRequest: {
       // TODO

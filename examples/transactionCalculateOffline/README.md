@@ -4,7 +4,7 @@
 ```js
 {
   version: '1.0',
-  request: 'transactionCalculateOffline',
+  type: 'transactionCalculateOffline',
   payload: {
     transactionCalculateOfflineRequest: {
       // TODO

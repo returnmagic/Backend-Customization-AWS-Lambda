@@ -9,7 +9,7 @@ Return Magic will be responsible of sending a confirmation email to the customer
 ```js
 {
   version: '1.0',
-  request: 'giftcardCreate',
+  type: 'giftcardCreate',
   payload: {
     request: {
       accountId: 'us-east-1:00000000-0000-0000-0000-000000000000',

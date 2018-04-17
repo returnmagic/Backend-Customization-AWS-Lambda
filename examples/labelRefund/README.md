@@ -6,7 +6,7 @@ The `labelRefund` integration request may be executed once a return is received.
 ```js
 {
   version: '1.0',
-  request: 'labelRefund',
+  type: 'labelRefund',
   payload: {
     labelRefundRequest: {
       // TODO
