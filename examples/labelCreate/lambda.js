@@ -16,17 +16,17 @@ exports.handler = function (event, context, callback) {
 
   /**
    * We would typically call an external service or run
-   * custom logic to generate a new giftcard. Here, to 
+   * custom logic to generate a new shipping label. Here, to 
    * simplify the example, we will simply create a fake
-   * static gift card. 
+   * static label 
    */
   const sampleLabelObject = {
-    // TODO
+    fileUrl: 'https://labels.mycie.com/0000000000000000.png',
   };
 
   /**
-   * Once the giftcard is generated, we return the gift
-   * card object to the Return Magic platform. Make sure to
+   * Once the label is generated, we return the label
+   * object to the Return Magic platform. Make sure to
    * pass the response object as the second parameter, since
    * the first parameter would be an error object (see docs
    * for more details).
