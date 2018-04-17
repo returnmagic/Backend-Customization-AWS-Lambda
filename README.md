@@ -8,9 +8,9 @@ Return Magic offers a powerful tool to extend the platform and customize it. The
 Return Magic can call external services to customize the way the platform is processing returns. We currently offer 17 different integration points that you can customize (we call them Integration Requests). For each Integration Request, you can decide to pick the default behavior, pick one of our native integration (issuing gift card via Shopify, for example, is natively supported by Return Magic for merchant using Shopify), or write your own code to fully customize the behavior. If you choose to write your own code, we can call your HTTPS web service or AWS Lambda function when we need to execute the logic (issue a gift card, for example).
 List of all supported Integration Requests
 
-| Integration Request | Definition |
-| ------------- | ------------- |
-| `syncOrders` | Return Magic needs to pull or receive the order information from the merchant’s platform. We can proactively receive all the data from the platform, or we can pull the data from the merchant’s API when we need the data of a specific order.
+| Integration Request | Link | Definition |
+| ------------- | ------------- |------------- |
+| `syncOrders` | [Link](examples/syncOrders) | Return Magic needs to pull or receive the order information from the merchant’s platform. We can proactively receive all the data from the platform, or we can pull the data from the merchant’s API when we need the data of a specific order.
 | `syncCustomers` | Return Magic can pull or receive the customer information from the merchant’s platform. We can proactively receive all the data from the platform, or we can pull the data from the merchant’s API when we need the data of a specific order.
 | `syncProducts` | Return Magic can pull or receive the product information from the merchant’s platform. We can proactively receive all the data from the platform, or we can pull the data from the merchant’s API when we need the data of a specific order.
 | `labelCreate` | Creates a shipping label
