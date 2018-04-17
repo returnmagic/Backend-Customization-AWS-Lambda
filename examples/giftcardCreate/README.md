@@ -28,11 +28,6 @@ Return Magic will be responsible of sending a confirmation email to the customer
 ```js
 {
   giftcard: {
-    integration: {
-      id: '00000000-0000-0000-0000-000000000000',
-      type: 'shopify',
-      name: 'my-store.myshopidy.com',
-    },
     amount: {
       value: 9.99,
       currency: 'USD',

@@ -21,11 +21,6 @@ exports.handler = function (event, context, callback) {
    * static gift card. 
    */
   const sampleGiftcardObject = {
-    integration: {
-      id: '00000000-0000-0000-0000-000000000000',
-      type: 'shopify',
-      name: 'my-store.myshopidy.com',
-    },
     amount: {
       value: 9.99,
       currency: 'USD',
