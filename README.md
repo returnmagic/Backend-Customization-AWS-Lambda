@@ -1,5 +1,7 @@
 # Return Magic - Integration Requests Guide
-This guide is intended for merchants that want to customize the Return Magic business logic. You will find important informations about the terms used by Return Magic and the lifecycle of a return (RMA). If you have any questions, please contact us at support@returnmagic.com.
+This guide is intended for merchant that wants to customize the Return Magic business logic. You will find important informations about the terms used by Return Magic and the lifecycle of a return. If you have any questions, please contact us at support@returnmagic.com.
+Before reading this guide, you should make sure to have a basic understanding of the Return Magic platform and the different state of a return (the lifecycle of a return). For more information about this, contact us and we will be happy to guide you!
+
 
 ## How to Extend the Platform With Your Own Code
 Return Magic offers a powerful tool to extend the platform and customize it. The following section will give you an overview of the integration process, and guide you thought the setup of your own service that extends Return Magic.
@@ -50,7 +52,7 @@ Return Magic can also execute an AWS Lambda functions to execute the Integration
 ### About Lambda functions
 From the AWS website: “AWS Lambda is a compute service that lets you run code without provisioning or managing servers. AWS Lambda executes your code only when needed and scales automatically, from a few requests per day to thousands per second. You pay only for the compute time you consume - there is no charge when your code is not running”. You can read more about AWS Lambda functions here. To learn more about AWS Lambda pricing, visit the Pricing section on the AWS website. Free tier is offer from AWS to all account, that should give you access to 1M requests and 400k GB-second for free, each month. This is usually enough for a mi-size merchant to use this service for free with Return Magic.
 
-To create a Lambda function to execute an Integration Request:
+### To create a Lambda function to execute an Integration Request:
 
 #### Step 1 - Create an Amazon Web Services Account
 First, we will need to create an AWS Account (of course, only if you don’t already have one!) If you are not familiar with Amazon Web Services, feel free to contact us so that we can help get up and running as soon as possible.
@@ -73,14 +75,14 @@ Once the IAM Role is create, we will heads to the Lambda section to create our n
 Finally, you will need to send the ARN of the newly created Lambda function to your Return Magic account representative with the name of the Integration Request that should be use with it so that we can update the configuration of your account. Please note that it’s possible to use one Lambda function for all Integration Requests, or multiple Lambda functions.
 
 
-How to choose between an HTTP service and a Lambda Service?
+## How to choose between an HTTP service and a Lambda Service?
 As a general guideline, Return Magic recommends of using Lambda function to run your custom code. It should be easier to get up and running, and you won’t have to manage any infrastructure. Also, the Lambda service will be, by default, extremely secure and scalable. 
 
 
 ## Support
 For any questions, please contact us at support@returnmagic.com
 
-# API Changes and Announcements
+## API Changes and Announcements
 To subscribe to the API changes and other relevant announcements, please subscribe to this page.
 
 
