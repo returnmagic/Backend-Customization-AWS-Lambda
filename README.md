@@ -11,22 +11,22 @@ List of all supported Integration Requests
 | Integration Request | Link | Definition |
 | ------------- | ------------- |------------- |
 | `syncOrders` | [Link](examples/syncOrders) | Return Magic needs to pull or receive the order information from the merchant’s platform. We can proactively receive all the data from the platform, or we can pull the data from the merchant’s API when we need the data of a specific order.
-| `syncCustomers` | Return Magic can pull or receive the customer information from the merchant’s platform. We can proactively receive all the data from the platform, or we can pull the data from the merchant’s API when we need the data of a specific order.
-| `syncProducts` | Return Magic can pull or receive the product information from the merchant’s platform. We can proactively receive all the data from the platform, or we can pull the data from the merchant’s API when we need the data of a specific order.
-| `labelCreate` | Creates a shipping label
-| `labelRefund` | Requests a refund for a shipping label
-| `labelTrack` | Updates the location and estimated time of arrival  of a label 
-| `transactionCalculateGiftcard` | Calculate the Totals for a gift card transaction
-| `transactionCalculateRefund` | Calculate the Totals for a refund transaction
-| `transactionCalculateExchange` | Calculate the Totals for an exchange transaction
-| `transactionCalculateOffline` | Calculate the Totals for  an offline transaction
-| `transactionExecuteGiftcard` | To mark a return as refunded, creates a gift card transaction
-| `transactionExecuteRefund` | To mark a return as refunded, creates  a refund transaction
-| `transactionExecuteExchange` | To mark a return as refunded, creates an exchange transaction
-| `transactionExecuteOffline` | To mark a return as refunded, creates an offline transaction
-| `giftcardCreate` | Once a return is refunded, it may be necessary to issue a gift card. Please note that a gift card may be needed even if the refund method is not gift card. For example, some merchant will decide to send a gift to a customer via the gift card if they decide to pick a specific policy (customer could receive a $5 bonus refund, if they come to the store for their refund). In that case, the platform will issue a refund on the original payment method and a gift card.
-| `exchangeCreate` | Once a return is refunded, it may be necessary to create an exchange. It’s up to the developer to decide if the “Exchange” is a draft order, a cart, or a regular order.
-| `inventoryUpdate` | Once a return is refunded, an inventory update may be required, depending on the settings of the stores, the settings of the return policy and the input of the user.
+| `syncCustomers` | [Link](examples/syncCustomers) | Return Magic can pull or receive the customer information from the merchant’s platform. We can proactively receive all the data from the platform, or we can pull the data from the merchant’s API when we need the data of a specific order.
+| `syncProducts` | [Link](examples/syncProducts) | Return Magic can pull or receive the product information from the merchant’s platform. We can proactively receive all the data from the platform, or we can pull the data from the merchant’s API when we need the data of a specific order.
+| `labelCreate` | [Link](examples/labelCreate) | Creates a shipping label
+| `labelRefund` | [Link](examples/labelRefund) | Requests a refund for a shipping label
+| `labelTrack` | [Link](examples/labelTrack) | Updates the location and estimated time of arrival  of a label 
+| `transactionCalculateGiftcard` | [Link](examples/transactionCalculateGiftcard) | Calculate the Totals for a gift card transaction
+| `transactionCalculateRefund` | [Link](examples/transactionCalculateRefund) | Calculate the Totals for a refund transaction
+| `transactionCalculateExchange` | [Link](examples/transactionCalculateExchange) | Calculate the Totals for an exchange transaction
+| `transactionCalculateOffline` | [Link](examples/transactionCalculateOffline) | Calculate the Totals for  an offline transaction
+| `transactionExecuteGiftcard` | [Link](examples/transactionExecuteGiftcard) | To mark a return as refunded, creates a gift card transaction
+| `transactionExecuteRefund` | [Link](examples/transactionExecuteRefund) | To mark a return as refunded, creates  a refund transaction
+| `transactionExecuteExchange` | [Link](examples/transactionExecuteExchange) | To mark a return as refunded, creates an exchange transaction
+| `transactionExecuteOffline` | [Link](examples/transactionExecuteOffline) | To mark a return as refunded, creates an offline transaction
+| `giftcardCreate` | [Link](examples/giftcardCreate) | Once a return is refunded, it may be necessary to issue a gift card. Please note that a gift card may be needed even if the refund method is not gift card. For example, some merchant will decide to send a gift to a customer via the gift card if they decide to pick a specific policy (customer could receive a $5 bonus refund, if they come to the store for their refund). In that case, the platform will issue a refund on the original payment method and a gift card.
+| `exchangeCreate` | [Link](examples/exchangeCreate) | Once a return is refunded, it may be necessary to create an exchange. It’s up to the developer to decide if the “Exchange” is a draft order, a cart, or a regular order.
+| `inventoryUpdate` | [Link](examples/inventoryUpdate) | Once a return is refunded, an inventory update may be required, depending on the settings of the stores, the settings of the return policy and the input of the user.
 
 
 
