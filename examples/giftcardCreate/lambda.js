@@ -16,12 +16,21 @@ exports.handler = function (event, context, callback) {
 
   /**
    * We would typically call an external service or run
-   * custom logic to generate a new giftcard. Here, to 
+   * your own logic to generate a new giftcard. Here, to 
    * simplify the example, we will simply create a fake
    * static gift card. 
    */
   const sampleGiftcardObject = {
-    // TODO
+    integration: {
+      id: '00000000-0000-0000-0000-000000000000',
+      type: 'shopify',
+      name: 'my-store.myshopidy.com',
+    },
+    amount: {
+      value: 9.99,
+      currency: 'USD',
+    },
+    code: 'ABCD 1234 ABCD 1234',
   };
 
   /**
