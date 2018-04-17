@@ -4,7 +4,7 @@ Before reading this guide, you should make sure to have a basic understanding of
 
 
 ## How to Extend the Platform With Your Own Code
-Return Magic offers a powerful tool to extend the platform and customize it. The following section will give you an overview of the integration process, and guide you thought the setup of your own service that extends Return Magic.
+Ready for some dark magic?! Return Magic offers a powerful tool to extend the platform and customize it. The following section will give you an overview of the integration process, and guide you thought each of the steps needed to extends Return Magic... and become a true wizard!
 
 ### Integration Requests
 Return Magic can call external services to customize the way the platform is processing returns. We currently offer 17 different integration points that you can customize (we call them Integration Requests). For each Integration Request, you can decide to pick the default behavior, pick one of our native integration (issuing gift card via Shopify, for example, is natively supported by Return Magic for merchant using Shopify), or write your own code to fully customize the behavior. If you choose to write your own code, we can call your HTTPS web service or AWS Lambda function when we need to execute the logic (issue a gift card, for example).
@@ -53,26 +53,7 @@ Return Magic can also execute an AWS Lambda functions to execute the Integration
 From the AWS website: “AWS Lambda is a compute service that lets you run code without provisioning or managing servers. AWS Lambda executes your code only when needed and scales automatically, from a few requests per day to thousands per second. You pay only for the compute time you consume - there is no charge when your code is not running”. You can read more about AWS Lambda functions here. To learn more about AWS Lambda pricing, visit the Pricing section on the AWS website. Free tier is offer from AWS to all account, that should give you access to 1M requests and 400k GB-second for free, each month. This is usually enough for a mi-size merchant to use this service for free with Return Magic.
 
 ### To create a Lambda function to execute an Integration Request:
-
-#### Step 1 - Create an Amazon Web Services Account
-First, we will need to create an AWS Account (of course, only if you don’t already have one!) If you are not familiar with Amazon Web Services, feel free to contact us so that we can help get up and running as soon as possible.
-
-#### Step 2 - Create a new IAM Role
-Once everything is ready, Return Magic will call your Lambda functions when needed to execute your business logic. To do so, we need to make sure that our platform is allowed to call and execute your Lambda function. To do so, we will create a new IAM Role with at least those permissions:
-
-```js
-{
-  // TODO
-}
-```
-
-Please note that the default AWS Account Return Magic will use is “000000” but you should validate with your account representative to make sure the default account will be use in your particular setup.
-
-#### Step 3 - Create a new Lambda function
-Once the IAM Role is create, we will heads to the Lambda section to create our new function. Create a new Lambda function (we recommend creating the function outside of a VPC to simplify the integration). Make sure to use the IAM Role created at step 2.
-
-#### Step 4 - Update your integration setup
-Finally, you will need to send the ARN of the newly created Lambda function to your Return Magic account representative with the name of the Integration Request that should be use with it so that we can update the configuration of your account. Please note that it’s possible to use one Lambda function for all Integration Requests, or multiple Lambda functions.
+We are working on a tutorial to help you create your AWS Account and set up your Lambda functions. Meanwhile, please contact us for more information.
 
 
 ## How to choose between an HTTP service and a Lambda Service?
