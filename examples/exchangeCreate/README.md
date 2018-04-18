@@ -1,7 +1,10 @@
-# `exchangeCreate` Integration
-The `exchangeCreate` integration request may be executed once a return is refunded.
+# `exchangeCreate` Integration (Private Alpha)
 
-Return Magic will be responsible of sending a confirmation email to the customer.
+*This integration request is not public yet. We are testing the new exchange flow with a few merchants and will update this page as soon as we have more details. If you are interested in this new flow, please contact us at support@returnmagic.com to request early access.*
+
+The `exchangeCreate` integration will be executed once a return is refunded for all returns of type exchange. Your external service will be responsible for creating a new order or a draft order and return any relevant information to Return Magic.
+
+Once an exchange is created, Return Magic will be responsible to notify the customer.
 
 
 ## Structure of the request
@@ -11,7 +14,7 @@ Return Magic will be responsible of sending a confirmation email to the customer
   type: 'exchangeCreate',
   payload: {
     exchangeCreateRequest: {
-      // TODO
+      // Structure to be announced
     }
   }
 }
@@ -21,7 +24,7 @@ Return Magic will be responsible of sending a confirmation email to the customer
 ```js
 {
   exchange: {
-    // TODO
+    // Structure to be announced
   }
 }
 ```
