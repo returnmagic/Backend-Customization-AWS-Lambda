@@ -16,22 +16,26 @@ exports.handler = function (event, context, callback) {
 
   /**
    * We would typically call an external service or run
-   * custom logic to generate a new giftcard. Here, to 
+   * custom logic to update the inventory. Here, to 
    * simplify the example, we will simply create a fake
-   * static gift card. 
+   * static inventory operation. 
    */
-  const sampleInventoryTransactionObject = {
-    // TODO
+  const sampleInventoryOperationObject = {
+    items: [{
+      productId: '00000000-0000-0000-0000-000000000000',
+      locationId: '00000000-0000-0000-0000-000000000000',
+      quantityRestocked: 0,
+    }]
   };
 
   /**
-   * Once the giftcard is generated, we return the gift
-   * card object to the Return Magic platform. Make sure to
+   * Once the inventory operation is generated, we return the operation
+   * object to the Return Magic platform. Make sure to
    * pass the response object as the second parameter, since
    * the first parameter would be an error object (see docs
    * for more details).
    */
   callback(null, {
-    inventory: sampleInventoryTransactionObject,
+    inventory: sampleInventoryOperationObject,
   });
 };
