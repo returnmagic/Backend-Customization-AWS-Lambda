@@ -1,8 +1,7 @@
 # `giftcardCreate` Integration
-The `giftcardCreate` request will be executed, once a return is refunded, if a gift card is needed. It will
-typically creates a new gift card, but some services will simply issue store credit to the customers.
+The `giftcardCreate` request will be executed once a return is refunded for all returns that need a giftcard. Your external service will be responsible of creating a giftcard or issuing store credit and return any relevant information to Return Magic.
 
-Return Magic will be responsible of sending a confirmation email to the customer.
+Once a giftcard is created, Return Magic will be responsible to notify the customer.
 
 
 ## Structure of the request
