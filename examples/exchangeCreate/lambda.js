@@ -21,7 +21,7 @@ exports.handler = function (event, context, callback) {
    * static gift card. 
    */
   const sampleExchangeObject = {
-    // TODO
+    // Structure to be announced
   };
 
   /**
