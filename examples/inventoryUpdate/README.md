@@ -1,5 +1,6 @@
 # `inventoryUpdate` Integration
-The `inventoryUpdate` integration request may be executed once a return is refunded.
+
+The `inventoryUpdate` integration request may be executed once a return is refunded. Your external service will be responsible to restock the inventory in the inventory management system.
 
 
 ## Structure of the request
@@ -8,8 +9,16 @@ The `inventoryUpdate` integration request may be executed once a return is refun
   version: '1.0',
   type: 'inventoryUpdate',
   payload: {
-    inventoryUpdateRequest: {
-      // TODO
+    request: {
+      accountId: 'us-east-1:00000000-0000-0000-0000-000000000000',
+      returnId: '00000000-0000-0000-0000-000000000000',
+      items: [{
+        productId: '00000000-0000-0000-0000-000000000000',
+        locationId: '00000000-0000-0000-0000-000000000000',
+        quantity: 10,
+        location: { /* DomainLocation */ },
+        product: { /* DomainProduct */ },
+      }],
     }
   }
 }
@@ -19,7 +28,12 @@ The `inventoryUpdate` integration request may be executed once a return is refun
 ```js
 {
   inventory: {
-    // TODO
+    items: [{
+      productId: '00000000-0000-0000-0000-000000000000',
+      locationId: '00000000-0000-0000-0000-000000000000',
+      quantityRestocked: 0,
+      debugMessages: [], // Optional
+    }]
   }
 }
 ```
