@@ -19,7 +19,7 @@
 | accountId  | string  | id of Return Magic account  |
 | returnId  | string  | id of return  |
 | items  | object  | list of items to calculate the refund. see items structure below  |
-| transactionType  | string  | type of transaction (in this case, it must be 'exchange')  |
+| transactionType  | string  | type of transaction (in this case, it must be 'refund')  |
 
 ## Structure of items
 ```js
@@ -56,7 +56,7 @@
 
 | attribute (opt. = optional)  | type  | description  |
 |---|---|---|
-| transactionType  | string  | type of transaction (in this case, it must be 'exchange')  |
+| transactionType  | string  | type of transaction (in this case, it must be 'refund')  |
 | transactionValue  | string  | value of transaction  |
 | items  | object[]  | list of items and the details of their refund amount. see below for items structure  |
 | totals  | object  | list of totals (ie: Subtotal, Total, etc). see below for totals structure  |
