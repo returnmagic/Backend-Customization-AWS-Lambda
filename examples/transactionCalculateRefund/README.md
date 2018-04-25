@@ -1,6 +1,6 @@
 # `transactionCalculateRefund` Integration
 
-## Structure of the request
+# Structure of the request
 ```js
 {
   version: '1.0',
@@ -21,7 +21,7 @@
 | items  | object  | list of items to calculate the refund. see items structure below  |
 | transactionType  | string  | type of transaction (in this case, it must be 'exchange')  |
 
-#### Structure of items
+## Structure of items
 ```js
 {
   ITEM_ID: {
@@ -38,7 +38,7 @@
 | code  | string  | return reason code  |
 | qty  | number  | quantity of said item  |
 
-## Structure of the response
+# Structure of the response
 ```js
 {
   transactionType: string,
@@ -63,7 +63,7 @@
 | actions (opt.)  | object  | list of posst actions after the transaction has been created. see below for actions structure  |
 | metadata (opt.)  | object  | an object that can have anything. use it if you'd like us to save some additional data.  |
 
-#### Structure of items
+## Structure of items
 ```js
 [{
   id: string,
@@ -84,7 +84,7 @@
 | unitFinalPrice  | number  | final price of said item (unitPrice - unitPriceDiscount)  |
 | lineFinalPrice  | number  | line final price (unitFinalPrice * quantity)  |
 
-#### Structure of totals
+## Structure of totals
 ```js
 [{
   sort: number,
@@ -99,7 +99,7 @@
 | label  | string  | lobal of total (for UI purposes)  |
 | value  | number  | value of total  |
 
-#### Structure of actions
+## Structure of actions
 ```js
 {
   giftcard: {
