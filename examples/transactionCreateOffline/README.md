@@ -1,61 +1,33 @@
-# `transactionCalculateRefund` Integration
+# `transactionCreateOffline` Integration
 
-# Structure of the request
+## Structure of the request
 ```js
 {
   version: '1.0',
-  type: 'transactionCalculateRefund',
+  type: 'transactionCreateOffline',
   payload: {
     accountId: string,
-    returnId: string,
-    items: object,
-    transactionType: string,
+    returnid: string,
+    calculateTransactionResponse: {
+      transactionType: string,
+      transactionValue: string,
+
+      items: object[],
+
+      totals: object[],
+
+      actions: object,
+
+      metadata: object,
+    }
   }
 }
 ```
 
 | attribute (opt. = optional)  | type  | description  |
 |---|---|---|
-| `accountId`  | string  | id of Return Magic account  |
-| `returnId`  | string  | id of return  |
-| `items`  | object  | list of items to calculate the refund. see items structure below  |
-| `transactionType`  | string  | type of transaction (in this case, it must be 'exchange')  |
-
-## Structure of items
-```js
-{
-  ITEM_ID: {
-    id: string,
-    code: string,
-    qty: number,
-  }
-}
-```
-
-| attribute (opt. = optional)  | type  | description  |
-|---|---|---|
-| `id`  | string  | item ID in Return Magic  |
-| `code`  | string  | return reason code  |
-| `qty`  | number  | quantity of said item  |
-
-# Structure of the response
-```js
-{
-  transactionType: string,
-  transactionValue: string,
-
-  items: object[],
-
-  totals: object[],
-
-  actions: object,
-
-  metadata: object,
-}
-```
-
-| attribute (opt. = optional)  | type  | description  |
-|---|---|---|
+| `accountId`  | string  | id of your account  |
+| `returnId`  | string  | id of the return  |
 | `transactionType`  | string  | type of transaction (in this case, it must be 'exchange')  |
 | `transactionValue`  | string  | value of transaction  |
 | `items`  | object[]  | list of items and the details of their refund amount. see below for items structure  |
@@ -123,3 +95,23 @@ Each of the keys above (giftcard, inventory, exchange) are optional (ie: your `a
 |---|---|---|
 | `value`  | number  | value of the action |
 | `metadata` (opt.)  | object  | an object that can have anything. use it if you'd like us to save some additional data. |
+
+## Structure of the response
+```js
+{
+  transactionType: string,
+  transactionValue: string,
+
+  items: object[],
+
+  totals: object[],
+
+  actions: object,
+
+  metadata: object,
+
+  transactionConfirmationNumber: string,
+}
+```
+
+Everything above follows the same rules as the structure of the request. The only new additional field in the response is `transactionConfirmationNumber` which is a string with a max size of `255`. This is to confirm that the transaction has been processed.

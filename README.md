@@ -22,10 +22,10 @@ List of all supported Integration Requests
 | `transactionCalculateRefund` | [Docs](examples/transactionCalculateRefund) | Calculate the Totals for a refund transaction
 | `transactionCalculateExchange` | [Docs](examples/transactionCalculateExchange) | Calculate the Totals for an exchange transaction
 | `transactionCalculateOffline` | [Docs](examples/transactionCalculateOffline) | Calculate the Totals for  an offline transaction
-| `transactionExecuteGiftcard` | [Docs](examples/transactionExecuteGiftcard) | To mark a return as refunded, creates a gift card transaction
-| `transactionExecuteRefund` | [Docs](examples/transactionExecuteRefund) | To mark a return as refunded, creates  a refund transaction
-| `transactionExecuteExchange` | [Docs](examples/transactionExecuteExchange) | To mark a return as refunded, creates an exchange transaction
-| `transactionExecuteOffline` | [Docs](examples/transactionExecuteOffline) | To mark a return as refunded, creates an offline transaction
+| `transactionCreateGiftcard` | [Docs](examples/transactionCreateGiftcard) | To mark a return as refunded, creates a gift card transaction
+| `transactionCreateRefund` | [Docs](examples/transactionCreateRefund) | To mark a return as refunded, creates  a refund transaction
+| `transactionCreateExchange` | [Docs](examples/transactionCreateExchange) | To mark a return as refunded, creates an exchange transaction
+| `transactionCreateOffline` | [Docs](examples/transactionCreateOffline) | To mark a return as refunded, creates an offline transaction
 | `giftcardCreate` | [Docs](examples/giftcardCreate) | Once a return is refunded, it may be necessary to issue a gift card. Please note that a gift card may be needed even if the refund method is not gift card. For example, some merchant will decide to send a gift to a customer via the gift card if they decide to pick a specific policy (customer could receive a $5 bonus refund, if they come to the store for their refund). In that case, the platform will issue a refund on the original payment method and a gift card.
 | `exchangeCreate` | [Docs](examples/exchangeCreate) | Once a return is refunded, it may be necessary to create an exchange. It’s up to the developer to decide if the “Exchange” is a draft order, a cart, or a regular order.
 | `inventoryUpdate` | [Docs](examples/inventoryUpdate) | Once a return is refunded, an inventory update may be required, depending on the settings of the stores, the settings of the return policy and the input of the user.
